@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		cellResult.innerHTML = element.result
 		cellCreatedAt.innerHTML = transformDateTimeTable(element.created_at)
 		cellButton.innerHTML = `<button id="edit" onclick="editRow('${element.id}')">Editar</button>
-								<button id="delete" onclick="deleteRow('${element.id}')">Eliminar</button>`
+		<button id="delete" onclick="deleteRow('${element.id}')">Eliminar</button>`
 		})
 
 	})
