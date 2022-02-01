@@ -6,7 +6,6 @@ var supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
 
 document.addEventListener('DOMContentLoaded', function (event) {
 
-
 	const tbodyRef = document.getElementById('result-list')
 
 	supabase
@@ -18,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 		console.log(element.id)
 		const newRow = tbodyRef.insertRow(index);
-
-
 
 		const cellId = newRow.insertCell(0);
 		const cellName = newRow.insertCell(1);
@@ -36,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		cellSpecimenAt.innerHTML = transformDateTable(element.specimen_at)
 		cellResult.innerHTML = element.result
 		cellCreatedAt.innerHTML = transformDateTimeTable(element.created_at)
-		cellButton.innerHTML = `<button id="edit" onclick="editRow('${element.id}')">Editar</button><button id="delete" onclick="deleteRow('${element.id}')">Eliminar</button>`
+		cellButton.innerHTML = `<button id="edit" onclick="editRow('${element.id}')">Editar</button>
+								<button id="delete" onclick="deleteRow('${element.id}')">Eliminar</button>`
 		})
 
 	})
@@ -85,7 +83,6 @@ function deleteRow(id){
 	  alert(err)
 	})
 }
-
 
 function addRow(event){
 	event.preventDefault();
@@ -140,9 +137,6 @@ function addRow(event){
 		  alert(err)
 		})
 	}
-
-
-
 }
 
 function transformDateTimeTable(value){
@@ -176,7 +170,6 @@ function transformDateTable(value){
           "/"+month+
           "/"+year
 }
-
 
 function transformDate(value){
 	const [date, time] = value.split('T')
