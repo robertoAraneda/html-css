@@ -96,8 +96,7 @@ td {
 }
 
 tr:hover {
-	background-color: green;
-	color: white;
+	background-color: #ddd;
 }
 
 tr button#edit {
