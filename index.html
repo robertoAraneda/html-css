@@ -25,30 +25,47 @@
 			</div>
 			<div class="form-control">
 				<label>Tipo de viajero</label>
-				<select>
-					<option>Inspector DGAC</option>
-					<option>Tripulante</option>
+				<select id="type-crew-member">
+					<option value="Inspector DGAC">Inspector DGAC</option>
+					<option value="tripulante">Tripulante</option>
 				</select>
 			</div>
 			<div class="form-control">
 				<label>Fecha emisión de resultado</label>
-				<input class="form-input" type="date" id="name">
+				<input class="form-input" type="date" id="specimen-at">
 			</div>
 
 			<div class="form-control">
 				<label>Resultado</label>
-				<select>
-					<option>Positivo</option>
-					<option>Negativo</option>
+				<select id="result">
+					<option value="positivo">Positivo</option>
+					<option value="negativo">Negativo</option>
 				</select>
 			</div>
 			<div class="form-control">
-				<button>Enviar</button>
+				<button onclick="addRow(event)">Enviar</button>
 			</div>
 		</form>
-	</section>
+	</div>
+	<div class="table-section">
+		<div class="title">
+			<h1>Lista de PCR funcionarios aerolínea</h1>
+		</div>
+		<table >
+			<tr>
+				<th>N°</th>
+				<th>Nombre</th>
+				<th>Tipo viajero</th>
+				<th>Fecha toma de muestra</th>
+				<th>Resultado</th>
+				<th>Fecha de creación</th>
+			</tr>
+			<tbody id="result-list"></tbody>
 
+		</table>
+	</div>
 
+	<script type="text/javascript" src="./function.js"></script>
 
 </body>
 </html>
