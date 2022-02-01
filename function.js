@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		const cellButton = newRow.insertCell(6);
 
 
-		cellId.innerHTML = element.id
+		cellId.innerHTML = index + 1
 		cellName.innerHTML = element.name
 		cellTypeCrewMember.innerHTML = element.type_crew_member
 		cellSpecimenAt.innerHTML = transformDateTable(element.specimen_at)
