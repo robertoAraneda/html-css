@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 		data.forEach((element, index) => {
 
-		console.log(element.id)
 		const newRow = tbodyRef.insertRow(index);
 
 		const cellId = newRow.insertCell(0);
