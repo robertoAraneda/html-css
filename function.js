@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         const cellResult = newRow.insertCell(4);
         const cellCreatedAt = newRow.insertCell(5);
         const cellButton = newRow.insertCell(6);
+        console.log(newRow);
 
         cellId.innerHTML = index + 1;
         cellName.innerHTML = element.name;
@@ -51,7 +52,7 @@ function editRow(id) {
       const run = (document.getElementById('run').value = data.run);
       const name = (document.getElementById('name').value = data.name);
       const typeCrewMember = (document.getElementById(
-        'type-crew-member',
+        'type-crew-member'
       ).value = data.type_crew_member);
       const specimenAt = (document.getElementById('specimen-at').value =
         transformDate(data.specimen_at));
